@@ -162,6 +162,67 @@
             background-color: #C7F464;
             color: #3C3C3C;
         }
+
+           /* Eye icon inside the scroll item */
+.scroll-item .eye-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #1BBC9B;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+.scroll-item .eye-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Popup window styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+    display: none;
+}
+
+.popup-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ff6f61;
+}
+
+.popup-content p {
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+}
+
+/* Show popup */
+.popup.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
     </style>
 </head>
 <body>
@@ -184,9 +245,15 @@
         </div>
 
         <div class="floating-panel">
-            <button onclick="filterGridItems(2)">Show Multiples of 2</button>
-            <button onclick="filterGridItems(3)">Show Multiples of 3</button>
-            <button onclick="filterGridItems(4)">Show Multiples of 4</button>
+            <button onclick="filterGridItems(2)">Drink of 2</button>
+            <button onclick="filterGridItems(3)">Food of 3</button>
+            <button onclick="filterGridItems(4)">Topping of 4</button>
+        </div>
+         <div id="popup" class="popup hidden">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <p id="popup-data">Data: </p>
+            </div>
         </div>
     </div>
 
