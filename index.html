@@ -1,262 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern and Aesthetic Layout with Counters</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f2f5;
-            position: relative;
-        }
-        .container {
-            height: 100%;
-        }
-        .div1 {
-            height: 10%;
-            border-bottom: 3px solid #556270;
-            background-color: #4ECDC4;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            color: white;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        .div1-items {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .div1-items .item-box {
-            background-color: white;
-            color: #4ECDC4;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.8em;
-            display: inline-block;
-            cursor: pointer;
-        }
-        .div1-total {
-            white-space: nowrap;
-        }
-        .total-button {
-            background-color: #ff6f61;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-size: 1.2em;
-            cursor: pointer;
-            border: none;
-            transition: background-color 0.3s;
-        }
-        .total-button:hover {
-            background-color: #ff867f;
-        }
-        .div2 {
-            height: 90%;
-            display: flex;
-        }
-        .div2-left {
-            width: 80%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            gap: 10px;
-            padding: 20px;
-            background-color: #f7f9fc;
-        }
-        .div2-right {
-            width: 20%;
-            background-color: #FF6B6B;
-            overflow-y: auto;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .scroll-item {
-            background-color: #C7F464;
-            color: #3C3C3C;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            text-align: center;
-            width: 100%;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, background-color 0.3s;
-            cursor: pointer;
-        }
-        .scroll-item:hover {
-            transform: scale(1.05);
-        }
-        .scroll-item.clicked {
-            background-color: #1BBC9B !important;
-        }
-        .grid-item {
-            background-color: #556270;
-            border-radius: 10px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-        .grid-item:hover {
-            background-color: #FF6B6B;
-            transform: scale(1.05);
-        }
-        .counter {
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            background-color: #FF6B6B;
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.8em;
-            font-weight: bold;
-            display: none;
-        }
-        .grid-item.hidden {
-            display: none;
-        }
-        .floating-panel {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            background-color: #4ECDC4;
-            padding: 10px 20px;
-            border-radius: 20px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            gap: 10px;
-        }
-        .floating-panel button {
-            background-color: #fff;
-            color: #4ECDC4;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-        .floating-panel button:hover {
-            background-color: #C7F464;
-            color: #3C3C3C;
-        }
-
-           /* Eye icon inside the scroll item */
-.scroll-item .eye-icon {
-    margin-left: 10px;
-    cursor: pointer;
-    color: #1BBC9B;
-    font-size: 1.2em;
-    transition: transform 0.3s;
-}
-.scroll-item .eye-icon:hover {
-    transform: scale(1.1);
-}
-
-/* Popup window styles */
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 300px;
-    text-align: center;
-    display: none;
-}
-
-.popup-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 1.5em;
-    color: #ff6f61;
-}
-
-.popup-content p {
-    margin-top: 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: black;
-}
-
-/* Show popup */
-.popup.active {
-    display: block;
-}
-
-.hidden {
-    display: none;
-}
-    </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POS App</title>
+    <style></style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="/hermanos/style.css" />
+  </head>
+  <body>
     <div class="container">
-        <!-- Display selected items in small boxes and total aligned right -->
-        <div class="div1" id="result-display">
-            <div class="div1-items" id="selected-items">
-                <!-- Selected items will appear here -->
-            </div>
-            <button class="total-button" id="total-display" onclick="addScrollItem()">
-                Total: 0
-            </button>
+      <!-- Display selected items in small boxes and total aligned right -->
+      <div class="div1" id="result-display">
+        <div class="div1-items" id="selected-items">
+          <!-- Selected items will appear here -->
         </div>
-        <div class="div2">
-            <div class="div2-left" id="grid-container">
-            </div>
-            <div class="div2-right" id="scroll-container">
-                <!-- Scrollable items -->
-            </div>
+        <button
+          class="total-button"
+          id="total-display"
+          onclick="addScrollItem()"
+        >
+          Total: 0
+        </button>
+      </div>
+      <div class="div2">
+        <div class="div2-left" id="grid-container"></div>
+        <div class="div2-right" id="scroll-container">
+          <!-- Scrollable items -->
         </div>
+      </div>
 
-        <div class="floating-panel">
-            <button onclick="filterGridItems(2)">Drink of 2</button>
-            <button onclick="filterGridItems(3)">Food of 3</button>
-            <button onclick="filterGridItems(4)">Topping of 4</button>
+      <div class="floating-panel">
+        <button onclick="filterGridItems('food')">Food of 2</button>
+        <button onclick="filterGridItems('beverage')">Drink of 3</button>
+        <button onclick="filterGridItems(4)">Topping of 4</button>
+      </div>
+      <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <p id="popup-data">Data:</p>
+          <table id="jsonTable"></table>
         </div>
-         <div id="popup" class="popup hidden">
-            <div class="popup-content">
-                <span class="close-btn" onclick="closePopup()">&times;</span>
-                <p id="popup-data">Data: </p>
-            </div>
-        </div>
+      </div>
     </div>
 
     <script src="/hermanos/script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
