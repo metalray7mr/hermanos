@@ -112,28 +112,52 @@
         defaultID= defaultID+1
             return defaultID;
         }
-				// Function to add a new scroll item with meta data and reset grid counters
-        function addScrollItem() {
-            const scrollContainer = document.getElementById('scroll-container');
-            const scrollItem = document.createElement('div');
-            const uniqueNumber = generateUniqueNumber();
+// Function to add a new scroll item with meta data and reset grid counters
+function addScrollItem() {
+    const scrollContainer = document.getElementById('scroll-container');
+    const scrollItem = document.createElement('div');
+    const uniqueNumber = generateUniqueNumber();
 
-            scrollItem.classList.add('scroll-item');
-            scrollItem.setAttribute('onclick', 'handleScrollItemClick(this)');
-            scrollItem.setAttribute('data-items', JSON.stringify(selectedItems));
-            scrollItem.innerHTML = 'Order #'+uniqueNumber;
+    scrollItem.classList.add('scroll-item');
+    scrollItem.setAttribute('onclick', 'handleScrollItemClick(this)');
+    scrollItem.setAttribute('data-items', JSON.stringify(selectedItems));
+    scrollItem.setAttribute('data-value', total);  // Save the total value in data-value
+    scrollItem.innerHTML = 'Order #' + uniqueNumber;
 
-            scrollContainer.appendChild(scrollItem);
+    // Create and add an eye icon
+    const eyeIcon = document.createElement('span');
+    eyeIcon.classList.add('eye-icon');
+    eyeIcon.innerHTML = '&#128065;';  // Eye icon using emoji
+    eyeIcon.addEventListener('click', function (event) {
+        event.stopPropagation();
+        openPopup(scrollItem.getAttribute('data-value'),scrollItem.getAttribute('data-items'));
+    });
 
-            // Reset total, selected items, and grid counters
-            total = 0;
-            selectedItems = {};
-            document.getElementById('total-display').innerText = 'Total: 0';
-            updateSelectedItemsDisplay();
-            resetGridCounters();
-            
-            resetAll();
-        }
+    scrollItem.appendChild(eyeIcon);
+    scrollContainer.appendChild(scrollItem);
+
+    // Reset total, selected items, and grid counters
+    total = 0;
+    selectedItems = {};
+    document.getElementById('total-display').innerText = 'Total: 0';
+    updateSelectedItemsDisplay();
+    resetGridCounters();
+    resetAll();
+}
+
+// Function to open popup and display the data-value
+function openPopup(dataValue,dataItems) {
+    const popup = document.getElementById('popup');
+    const popupData = document.getElementById('popup-data');
+    popupData.innerText = dataItems + ` Total AMT: ${dataValue}`;
+    popup.classList.add('active');
+}
+
+// Function to close popup
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.classList.remove('active');
+}
         
         // Function to handle scroll item click
         function handleScrollItemClick(scrollItem) {
