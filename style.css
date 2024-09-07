@@ -6,9 +6,39 @@ html {
   background-color: #f0f2f5;
   position: relative;
 }
+
 .container {
   height: 100%;
 }
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  color: white;
+  background-color: #4caf50; /* Green background */
+  border: none; /* Remove default borders */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge button */
+}
+
+button:active {
+  background-color: #3e8e41; /* Even darker when clicked */
+  transform: scale(0.98); /* Slight shrink when pressed */
+  box-shadow: 0 5px #666; /* Add shadow when active */
+}
+
+button:focus {
+  outline: none; /* Remove outline */
+  box-shadow: 0 0 5px #4caf50; /* Glow effect on focus */
+}
+
 .div1 {
   height: 10%;
   border-bottom: 3px solid #556270;
@@ -216,4 +246,14 @@ html {
 
 .hidden {
   display: none;
+}
+
+/* Apply blur effect and gradient */
+.blur-overlay {
+  backdrop-filter: blur(4px); /* Blur effect */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.581),
+    rgba(0, 0, 0, 0.297)
+  ); /* Gradient */
 }

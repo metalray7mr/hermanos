@@ -7,6 +7,8 @@ let foodNames = [
     type: "food",
     nonVeg: "0",
     price: "109",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Burrito.JPG/800px-Burrito.JPG",
   },
   {
     id: 2,
@@ -14,6 +16,8 @@ let foodNames = [
     type: "food",
     nonVeg: "0",
     price: "129",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Burrito.JPG/800px-Burrito.JPG",
   },
   {
     id: 3,
@@ -21,6 +25,8 @@ let foodNames = [
     type: "food",
     nonVeg: "1",
     price: "129",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Burrito.JPG/800px-Burrito.JPG",
   },
   {
     id: 4,
@@ -28,6 +34,8 @@ let foodNames = [
     type: "food",
     nonVeg: "1",
     price: "189",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Burrito.JPG/800px-Burrito.JPG",
   },
   {
     id: 5,
@@ -35,6 +43,8 @@ let foodNames = [
     type: "food",
     nonVeg: "0",
     price: "109",
+    image:
+      "https://www.traderjoes.com/content/dam/trjo/recipes/308MainImage.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
   },
   {
     id: 6,
@@ -42,6 +52,8 @@ let foodNames = [
     type: "food",
     nonVeg: "0",
     price: "129",
+    image:
+      "https://www.traderjoes.com/content/dam/trjo/recipes/308MainImage.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
   },
   {
     id: 7,
@@ -49,6 +61,8 @@ let foodNames = [
     type: "food",
     nonVeg: "1",
     price: "129",
+    image:
+      "https://www.traderjoes.com/content/dam/trjo/recipes/308MainImage.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
   },
   {
     id: 8,
@@ -56,6 +70,8 @@ let foodNames = [
     type: "food",
     nonVeg: "1",
     price: "189",
+    image:
+      "https://www.traderjoes.com/content/dam/trjo/recipes/308MainImage.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
   },
   {
     id: 9,
@@ -63,6 +79,8 @@ let foodNames = [
     type: "food",
     nonVeg: "0",
     price: "109",
+    image:
+      "https://mojo.generalmills.com/api/public/content/GmHhoT5mr0Sue2oMxdyEig_webp_base.webp?v=868009f1&t=e724eca7b3c24a8aaa6e089ed9e611fd",
   },
   {
     id: 10,
@@ -70,6 +88,8 @@ let foodNames = [
     type: "food",
     nonVeg: "0",
     price: "129",
+    image:
+      "https://mojo.generalmills.com/api/public/content/GmHhoT5mr0Sue2oMxdyEig_webp_base.webp?v=868009f1&t=e724eca7b3c24a8aaa6e089ed9e611fd",
   },
   {
     id: 11,
@@ -77,6 +97,8 @@ let foodNames = [
     type: "food",
     nonVeg: "1",
     price: "129",
+    image:
+      "https://mojo.generalmills.com/api/public/content/GmHhoT5mr0Sue2oMxdyEig_webp_base.webp?v=868009f1&t=e724eca7b3c24a8aaa6e089ed9e611fd",
   },
   {
     id: 12,
@@ -84,6 +106,8 @@ let foodNames = [
     type: "food",
     nonVeg: "1",
     price: "189",
+    image:
+      "https://mojo.generalmills.com/api/public/content/GmHhoT5mr0Sue2oMxdyEig_webp_base.webp?v=868009f1&t=e724eca7b3c24a8aaa6e089ed9e611fd",
   },
   {
     id: 13,
@@ -91,6 +115,8 @@ let foodNames = [
     type: "food",
     nonVeg: "0",
     price: "109",
+    image:
+      "https://veganheaven.org/wp-content/uploads/2020/05/Mexican-Salad-9.jpg",
   },
   {
     id: 14,
@@ -98,6 +124,8 @@ let foodNames = [
     type: "food",
     nonVeg: "0",
     price: "129",
+    image:
+      "https://veganheaven.org/wp-content/uploads/2020/05/Mexican-Salad-9.jpg",
   },
   {
     id: 15,
@@ -105,6 +133,8 @@ let foodNames = [
     type: "food",
     nonVeg: "1",
     price: "129",
+    image:
+      "https://veganheaven.org/wp-content/uploads/2020/05/Mexican-Salad-9.jpg",
   },
   {
     id: 16,
@@ -112,6 +142,8 @@ let foodNames = [
     type: "food",
     nonVeg: "1",
     price: "189",
+    image:
+      "https://veganheaven.org/wp-content/uploads/2020/05/Mexican-Salad-9.jpg",
   },
   {
     id: 17,
@@ -119,6 +151,8 @@ let foodNames = [
     type: "beverage",
     nonVeg: "0",
     price: "89",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8vfjdM_NLn-yO-fwnlFTMiNNVMQUKUo_t7g&s",
   },
   {
     id: 18,
@@ -126,6 +160,8 @@ let foodNames = [
     type: "beverage",
     nonVeg: "0",
     price: "79",
+    image:
+      "https://www.foodandwine.com/thmb/e8AvEfBBfwjg3xmt6E__rRvSZlA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Mojito-FT-RECIPE1022-2000-85cdb1eb59454847b713713e32e365c0.jpg",
   },
   {
     id: 19,
@@ -133,6 +169,8 @@ let foodNames = [
     type: "beverage",
     nonVeg: "1",
     price: "19",
+    image:
+      "https://www.beveragedaily.com/var/wrbm_gb_food_pharma/storage/images/_aliases/wrbm_large/publications/food-beverage-nutrition/beveragedaily.com/article/2019/07/12/diet-coke-helps-boost-coca-cola-s-brand-value-brand-finance-rankings/9912727-1-eng-GB/Diet-Coke-helps-boost-Coca-Cola-s-brand-value-Brand-Finance-rankings.jpg",
   },
   {
     id: 20,
@@ -140,6 +178,8 @@ let foodNames = [
     type: "beverage",
     nonVeg: "1",
     price: "9",
+    image:
+      "https://www.telegraph.co.uk/content/dam/health-fitness/2024/03/04/TELEMMGLPICT000369263018_17095822374330_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpeg?imwidth=680",
   },
   {
     id: 21,
@@ -185,7 +225,17 @@ function generateGridItems() {
     gridItem.setAttribute("data-value", foodNames[i]["price"]);
     gridItem.setAttribute("data-type", foodNames[i]["type"]);
     gridItem.setAttribute("data-name", foodNames[i]["name"]);
+
     gridItem.setAttribute("onclick", "incrementCounter(this)");
+
+    gridItem.classList.add("blur-overlay"); // Use the class defined in CSS
+
+    gridItem.style.backgroundImage = "url('" + foodNames[i]["image"] + "')";
+
+    gridItem.style.backgroundSize = "cover"; // Ensure the image covers the gridItem
+    gridItem.style.background =
+      "linear-gradient(to bottom,rgba(0, 0, 0, 0.581),rgba(0, 0, 0, 0.297));"; // Center the image
+
     gridItem.innerHTML = `${foodNames[i]["name"]}: ${foodNames[i]["price"]}<span class="counter">0</span>`;
     gridContainer.appendChild(gridItem);
   }
@@ -297,21 +347,10 @@ function addScrollItem() {
   scrollItem.setAttribute("onclick", "handleScrollItemClick(this)");
   scrollItem.setAttribute("data-items", JSON.stringify(selectedItems));
   scrollItem.setAttribute("data-value", total); // Save the total value in data-value
+  scrollItem.setAttribute("saved", "0");
+
   scrollItem.innerHTML = "Order #" + uniqueNumber;
 
-  // Create and add an eye icon
-  const eyeIcon = document.createElement("span");
-  eyeIcon.classList.add("eye-icon");
-  eyeIcon.innerHTML = "&#128065;"; // Eye icon using emoji
-  eyeIcon.addEventListener("click", function (event) {
-    event.stopPropagation();
-    openPopup(
-      scrollItem.getAttribute("data-value"),
-      scrollItem.getAttribute("data-items")
-    );
-  });
-
-  scrollItem.appendChild(eyeIcon);
   scrollContainer.appendChild(scrollItem);
 
   // Reset total, selected items, and grid counters
@@ -324,10 +363,15 @@ function addScrollItem() {
 }
 
 // Function to open popup and display the data-value
-function openPopup(dataValue, dataItems) {
+function openPopup(scrollItem) {
   const popup = document.getElementById("popup");
   const popupData = document.getElementById("popup-data");
-  popupData.innerText = ` Total AMT: ${dataValue}`;
+
+  (dataValue = scrollItem.getAttribute("data-value")),
+    (dataItems = scrollItem.getAttribute("data-items")),
+    (saved = scrollItem.getAttribute("saved"));
+
+  popupData.innerText = `<br> Total AMT: ${dataValue} </br>`;
 
   // Parse the JSON string
   const data = JSON.parse(dataItems);
@@ -344,24 +388,55 @@ function openPopup(dataValue, dataItems) {
   // Add the content to the table
   table.innerHTML = tableContent;
 
+  if (saved == "0") {
+    const button1 = document.createElement("button");
+    button1.innerText = "Cash Pay";
+
+    // Create the second button
+    const button2 = document.createElement("button");
+    button2.innerText = "Online Pay";
+
+    // Append both buttons to the div
+    popupData.appendChild(button1);
+    popupData.appendChild(button2);
+
+    // Add an onclick event to Button 1
+    button1.onclick = function () {
+      addDataToExcel(scrollItem, "cash");
+    };
+    // Add an onclick event to Button 1
+    button2.onclick = function () {
+      addDataToExcel(scrollItem, "online");
+    };
+  }
+
   popup.classList.add("active");
 }
 
 // Function to close popup
-function closePopup() {
+function closePopup(scrollItem) {
   const popup = document.getElementById("popup");
   popup.classList.remove("active");
 }
 
-function addDataToExcel(formData) {
+function addDataToExcel(scrollItem, type) {
   // Send the data to Google Apps Script Web App
-  console.log(formData);
+
+  formData = scrollItem.getAttribute("data-items");
+
+  formData = JSON.parse(formData);
+
+  formData2 = { transcType: type, order: formData };
+
+  formData3 = JSON.stringify(formData2);
+
+  console.log(formData3);
   fetch(
     "https://script.google.com/macros/s/AKfycbxpnquT6t9q82TAr_yMmYeTkFTXncm-B3CzN4KAcrq_Roj9AQbI6gvdIo6NvGeLKJzt/exec",
     {
       // Replace with your Web App URL
       method: "POST",
-      body: formData,
+      body: formData3,
       headers: {
         "Content-Type": "application/json",
       },
@@ -371,9 +446,21 @@ function addDataToExcel(formData) {
     .then((response) => response.text())
     .then((data) => {
       if (data === "Success") {
-        messageDiv.textContent = "Data successfully added to Google Sheets!";
+        console.log("move here");
+        scrollItem.classList.add("clicked");
+        const scrollContainer = document.getElementById("scroll-container");
+        scrollContainer.appendChild(scrollItem);
+        closePopup(scrollItem);
+        scrollItem.setAttribute("saved", "1");
       } else {
-        messageDiv.textContent = "Something went wrong. Please try again.";
+        console.log("move falied");
+
+        scrollItem.classList.add("clicked");
+        const scrollContainer = document.getElementById("scroll-container");
+        scrollContainer.appendChild(scrollItem);
+        closePopup(scrollItem);
+
+        scrollItem.setAttribute("saved", "1");
       }
     })
     .catch((error) => {
@@ -383,11 +470,7 @@ function addDataToExcel(formData) {
 }
 // Function to handle scroll item click
 function handleScrollItemClick(scrollItem) {
-  scrollItem.classList.add("clicked");
-  const scrollContainer = document.getElementById("scroll-container");
-  scrollContainer.appendChild(scrollItem);
-
-  addDataToExcel(scrollItem.getAttribute("data-items"));
+  openPopup(scrollItem);
 }
 
 // Function to filter grid items based on multiples
