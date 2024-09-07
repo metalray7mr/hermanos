@@ -1,18 +1,4 @@
 var defaultID = 110;
-const foodNamesold = [
-  "Pizza",
-  "Burger",
-  "Pasta",
-  "Sushi",
-  "Tacos",
-  "Salad",
-  "Noodles",
-  "Dosa",
-  "Sandwich",
-  "Biryani",
-  "Paneer",
-  "Chowmein",
-];
 
 let foodNames = [
   {
@@ -154,6 +140,34 @@ let foodNames = [
     type: "beverage",
     nonVeg: "1",
     price: "9",
+  },
+  {
+    id: 21,
+    name: "Chicken",
+    type: "topping",
+    nonVeg: "0",
+    price: "39",
+  },
+  {
+    id: 22,
+    name: "Paneer",
+    type: "topping",
+    nonVeg: "0",
+    price: "29",
+  },
+  {
+    id: 23,
+    name: "Potato",
+    type: "topping",
+    nonVeg: "1",
+    price: "29",
+  },
+  {
+    id: 24,
+    name: "Guacamole",
+    type: "topping",
+    nonVeg: "1",
+    price: "59",
   },
 ];
 
